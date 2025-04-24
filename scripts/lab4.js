@@ -6,15 +6,13 @@
  * @returns The sum of the two numbers if add is true and false otherwise.
  */
 function sumValues(num1, num2, add) {
-    if (add && (typeof num1 === 'number') && (typeof num2 === 'number')) {
+    if (add && (typeof num1 === "number") && (typeof num2 === "number")) {
         let result = 0;
-
         result = num1 + num2;
-
         return result;
     }
     else {
-        return add;
+        return false;
     }
 }
 
@@ -32,7 +30,7 @@ function discountPrices(prices, discount) {
         const length = prices.length;
         let discountedPrice = 0
         for(let i = 0; i < length; i++) {
-            discountedPrice += prices[i] * (1 - discount);
+            discountedPrice = prices[i] * (1 - discount);
             discounted.push(discountedPrice);
         }
         return discounted;
